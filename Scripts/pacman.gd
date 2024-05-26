@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+#Testing comment
 
 const SPEED = 100.0
 
