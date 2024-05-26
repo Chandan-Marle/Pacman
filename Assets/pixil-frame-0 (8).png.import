@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5nrbie1ueyjn"
-path="res://.godot/imported/White Maze.png-80812b608d5feda33c38915ff94aa847.ctex"
+uid="uid://cl8isfaqhet3t"
+path="res://.godot/imported/pixil-frame-0 (8).png-1187fcb86e538240ff56832dae4f49d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/White Maze.png"
-dest_files=["res://.godot/imported/White Maze.png-80812b608d5feda33c38915ff94aa847.ctex"]
+source_file="res://Assets/pixil-frame-0 (8).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (8).png-1187fcb86e538240ff56832dae4f49d1.ctex"]
 
 [params]
 

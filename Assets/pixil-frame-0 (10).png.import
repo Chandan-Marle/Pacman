@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb1epts3saq3k"
-path="res://.godot/imported/Blue Maze.png-305ffeede22119d9d58475dbe0d786ab.ctex"
+uid="uid://csndrrk7is22l"
+path="res://.godot/imported/pixil-frame-0 (10).png-7e299d9bb110095468c7405db93f83bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Maze.png"
-dest_files=["res://.godot/imported/Blue Maze.png-305ffeede22119d9d58475dbe0d786ab.ctex"]
+source_file="res://Assets/pixil-frame-0 (10).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (10).png-7e299d9bb110095468c7405db93f83bd.ctex"]
 
 [params]
 
