@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://b38r47u556va7"]
+
+[ext_resource type="Texture2D" uid="uid://dbrxskny6v4bi" path="res://Assets/pixil-frame-0 (3).png" id="1_6vh87"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbrga"]
+atlas = ExtResource("1_6vh87")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo4vv"]
+atlas = ExtResource("1_6vh87")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmjtj"]
+atlas = ExtResource("1_6vh87")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xq6m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbrga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo4vv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmjtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo4vv")
+}],
+"loop": true,
+"name": &"Rightward",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_18maf"]
+radius = 5.0
+
+[node name="Pacman" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_3xq6m")
+animation = &"Rightward"
+autoplay = "Rightward"
+frame = 1
+frame_progress = 0.692836
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -6)
+shape = SubResource("CircleShape2D_18maf")
