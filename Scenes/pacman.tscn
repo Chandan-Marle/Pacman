@@ -122,8 +122,8 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_18maf"]
-radius = 5.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s56qt"]
+size = Vector2(16, 16)
 
 [node name="Pacman" type="CharacterBody2D"]
 script = ExtResource("1_xdkk6")
@@ -131,11 +131,10 @@ script = ExtResource("1_xdkk6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_3xq6m")
-animation = &"Rightward"
+animation = &"Downward"
 autoplay = "Rightward"
-frame = 1
-frame_progress = 0.232382
+frame_progress = 0.779944
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -6)
-shape = SubResource("CircleShape2D_18maf")
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_s56qt")
