@@ -1,52 +1,52 @@
 extends CharacterBody2D
 
-@onready var animated_sprite = $AnimatedSprite2D
+@onready var animatedSprite = $AnimatedSprite2D
 @onready var down = $"Turn Detection/Down"
 @onready var up = $"Turn Detection/Up"
 @onready var left = $"Turn Detection/Left"
 @onready var right = $"Turn Detection/Right"
 
 const SPEED = 40.0
-var current_direction = 'left'
-var next_direction = 'left'
+var currentDirection = 'left'
+var nextDirection = 'left'
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed('move_left'):
-		next_direction = 'left'
+		nextDirection = 'left'
 	if Input.is_action_just_pressed('move_right'):
-		next_direction = 'right'
+		nextDirection = 'right'
 	if Input.is_action_just_pressed('move_up'):
-		next_direction = 'up'
+		nextDirection = 'up'
 	if Input.is_action_just_pressed('move_down'):
-		next_direction = 'down'
-	match next_direction:
+		nextDirection = 'down'
+	match nextDirection:
 		'left':
 			if not left.is_colliding():
-				current_direction = next_direction
+				currentDirection = nextDirection
 		'right':
 			if not right.is_colliding():
-				current_direction = next_direction
+				currentDirection = nextDirection
 		'up':
 			if not up.is_colliding():
-				current_direction = next_direction
+				currentDirection = nextDirection
 		'down':
 			if not down.is_colliding():
-				current_direction = next_direction
-	match current_direction:
+				currentDirection = nextDirection
+	match currentDirection:
 		'left':
 			velocity.x = -SPEED
 			velocity.y = 0
-			animated_sprite.play('Leftward')
+			animatedSprite.play('Leftward')
 		'right':
 			velocity.x = SPEED
 			velocity.y = 0
-			animated_sprite.play('Rightward')
+			animatedSprite.play('Rightward')
 		'up':
 			velocity.x = 0
 			velocity.y = -SPEED
-			animated_sprite.play('Upward')
+			animatedSprite.play('Upward')
 		'down':
 			velocity.x = 0
 			velocity.y = SPEED
-			animated_sprite.play('Downward')
+			animatedSprite.play('Downward')
 	move_and_slide()
