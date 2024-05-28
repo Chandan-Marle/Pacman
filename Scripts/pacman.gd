@@ -1,23 +1,22 @@
 extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
-
+@onready var left_1 = $Rays/Left1
+@onready var right_1 = $Rays/Right1
+@onready var left_2 = $Rays/Left2
+@onready var left_3 = $Rays/Left3
+@onready var right_2 = $Rays/Right2
+@onready var right_3 = $Rays/Right3
+@onready var up_1 = $Rays/Up1
+@onready var up_3 = $Rays/Up3
+@onready var up_2 = $Rays/Up2
+@onready var down_1 = $Rays/Down1
+@onready var down_2 = $Rays/Down2
+@onready var down_3 = $Rays/Down3
 
 const SPEED = 100.0
 var current_direction = 'left'
 var next_direction = 'left'
-@onready var left_1 = $Left1
-@onready var right_1 = $Right1
-@onready var left_2 = $Left2
-@onready var left_3 = $Left3
-@onready var right_2 = $Right2
-@onready var right_3 = $Right3
-@onready var up_1 = $Up1
-@onready var up_3 = $Up3
-@onready var up_2 = $Up2
-@onready var down_1 = $Down1
-@onready var down_2 = $Down2
-@onready var down_3 = $Down3
 
 func _process(delta):
 	if Input.is_action_just_pressed('move_left'):
