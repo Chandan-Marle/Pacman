@@ -34,6 +34,7 @@ func _physics_process(delta):
 				currentDirection = nextDirection
 	match currentDirection:
 		'left':
+			
 			velocity.x = -SPEED
 			velocity.y = 0
 			animatedSprite.play('Leftward')

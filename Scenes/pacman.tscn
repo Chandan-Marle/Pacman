@@ -68,7 +68,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Downward",
-"speed": 8.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -85,7 +85,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Leftward",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -102,7 +102,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Rightward",
-"speed": 8.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -119,7 +119,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Upward",
-"speed": 8.0
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s56qt"]
@@ -131,7 +131,7 @@ script = ExtResource("1_xdkk6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_3xq6m")
-animation = &"Leftward"
+animation = &"Upward"
 autoplay = "Leftward"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
