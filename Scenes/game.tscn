@@ -172,4 +172,4 @@ position = Vector2(0, -16)
 texture = ExtResource("3_b4lxw")
 
 [node name="Pellet" parent="." instance=ExtResource("6_0vvre")]
-position = Vector2(-23, 0)
+position = Vector2(-36, -22)
