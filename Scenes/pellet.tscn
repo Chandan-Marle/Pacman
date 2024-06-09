@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccid8t0cgyk7b"]
+
+[ext_resource type="Script" path="res://Scripts/pellet.gd" id="1_3pash"]
+[ext_resource type="Texture2D" uid="uid://c44ojuhiw4x8i" path="res://Assets/pixil-frame-0 (14).png" id="1_es82j"]
+[ext_resource type="Texture2D" uid="uid://dbrxskny6v4bi" path="res://Assets/pixil-frame-0 (3).png" id="2_plkie"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7x50"]
+atlas = ExtResource("1_es82j")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cx7e"]
+atlas = ExtResource("2_plkie")
+region = Rect2(192, 32, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fx17f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7x50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cx7e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ykjy"]
+radius = 4.0
+
+[node name="Pellet" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_3pash")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fx17f")
+autoplay = "default"
+frame_progress = 0.772266
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3ykjy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

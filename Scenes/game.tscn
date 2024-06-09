@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://0cimkcv1rbo1"]
+[gd_scene load_steps=9 format=3 uid="uid://0cimkcv1rbo1"]
 
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_uw5gb"]
 [ext_resource type="Texture2D" uid="uid://bwv5hki43k5nb" path="res://Assets/pixil-frame-0 (13).png" id="3_b4lxw"]
 [ext_resource type="Texture2D" uid="uid://cl8isfaqhet3t" path="res://Assets/pixil-frame-0 (8).png" id="3_j7v0j"]
 [ext_resource type="PackedScene" uid="uid://b38r47u556va7" path="res://Scenes/pacman.tscn" id="4_l6cji"]
 [ext_resource type="Texture2D" uid="uid://csndrrk7is22l" path="res://Assets/pixil-frame-0 (10).png" id="4_lcwsi"]
+[ext_resource type="PackedScene" uid="uid://ccid8t0cgyk7b" path="res://Scenes/pellet.tscn" id="6_0vvre"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_njej4"]
 texture = ExtResource("4_lcwsi")
@@ -39,6 +41,10 @@ tile_size = Vector2i(3, 3)
 sources/4 = SubResource("TileSetAtlasSource_njej4")
 
 [node name="Game" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_uw5gb")
 
 [node name="Pacman" parent="." instance=ExtResource("4_l6cji")]
 position = Vector2(0, 6)
@@ -164,3 +170,6 @@ texture = ExtResource("3_j7v0j")
 z_index = -1
 position = Vector2(0, -16)
 texture = ExtResource("3_b4lxw")
+
+[node name="Pellet" parent="." instance=ExtResource("6_0vvre")]
+position = Vector2(-23, 0)
