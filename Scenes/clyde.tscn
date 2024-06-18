@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bo0q4x8adprl6"]
+[gd_scene load_steps=13 format=3 uid="uid://bo0q4x8adprl6"]
 
 [ext_resource type="Texture2D" uid="uid://dbrxskny6v4bi" path="res://Assets/pixil-frame-0 (3).png" id="1_4y46u"]
+[ext_resource type="Script" path="res://Scripts/clyde.gd" id="1_nryci"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pv4mm"]
 atlas = ExtResource("1_4y46u")
@@ -82,9 +83,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onsk5"]
-size = Vector2(16, 16)
+size = Vector2(15.7, 15.7)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_nryci")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
@@ -95,3 +97,5 @@ autoplay = "Rightward"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_onsk5")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
